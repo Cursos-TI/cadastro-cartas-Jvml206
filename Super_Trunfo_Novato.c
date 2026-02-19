@@ -7,7 +7,7 @@
 int main(){
     // Área para definição das variáveis para armazenar as propriedades das cidades
     int populacao1, populacao2, numero_de_pontos_turisticos1, numero_de_pontos_turisticos2;
-    char estado1[2], estado2[2], codigo1[5], codigo2[5], nome_cidade1[20], nome_cidade2[20];
+    char estado1, estado2, codigo1[4], codigo2[4], nome_cidade1[20], nome_cidade2[20];
     float area1, area2, PIB1, PIB2;
     
     // Área para entrada de dados
@@ -17,9 +17,9 @@ int main(){
     printf("Nome da cidade: ");
     scanf("%s", nome_cidade1);
     printf("Estado: ");
-    scanf("%s", estado1);
+    scanf(" %c", &estado1);
     printf("Código: ");
-    scanf("%s", codigo1);
+    scanf("%3s", codigo1);
     printf("População: ");
     scanf("%d", &populacao1);
     printf("PIB (Em bilhões de reais): ");
@@ -34,9 +34,9 @@ int main(){
     printf("Nome da cidade: ");
     scanf("%s", nome_cidade2);
     printf("Estado: ");
-    scanf("%s", estado2);
+    scanf(" %c", &estado2);
     printf("Código: ");
-    scanf("%s", codigo2);
+    scanf("%3s", codigo2);
     printf("População: ");
     scanf("%d", &populacao2);
     printf("PIB (Em bilhões de reais): ");
@@ -49,7 +49,7 @@ int main(){
     // Área para exibição dos dados da cidade
 
     printf("\nCarta 1\n");
-    printf("Estado: %s", estado1);
+    printf("Estado: %c", estado1);
     printf("\nCódigo: %s", codigo1);
     printf("\nNome da cidade: %s", nome_cidade1);
     printf("\nPopulação: %d", populacao1);
@@ -58,7 +58,7 @@ int main(){
     printf("\nNúmero de pontos turisticos: %i", numero_de_pontos_turisticos1);
 
     printf("\nCarta 2\n");
-    printf("Estado: %s", estado2);
+    printf("Estado: %c", estado2);
     printf("\nCódigo: %s", codigo2);
     printf("\nNome da cidade: %s", nome_cidade2);
     printf("\nPopulação: %d", populacao2);
