@@ -167,157 +167,181 @@ int main()
         break;
     }
 
-    printf("\n\nComparação:\n");
-    escolha == 1 ? printf("%s (Escohido) X %s\n", nome_pais1, nome_pais2) : printf("%s X %s (Escohido)\n", nome_pais1, nome_pais2);
+    if (atributo1 != atributo2){
+        printf("\n\nComparação:\n");
+        escolha == 1 ? printf("%s (Escohido) X %s\n", nome_pais1, nome_pais2) : printf("%s X %s (Escohido)\n", nome_pais1, nome_pais2);
 
-    printf("\nAtributos escolhidos:\n");
-    switch (atributo1)
-    {
-    case 1:
-        printf("População e ");
-        break;
-    case 2:
-        printf("Área e ");
-        break;
-    case 3:
-        printf("PIB e ");
-        break;
-    case 4:
-        printf("Número de pontos turisticos e ");
-        break;
-    case 5:
-        printf("Densidade Populacional e ");
-        break;
-    }
-    switch (atributo2)
-    {
-    case 1:
-        printf("População\n");
-        break;
-    case 2:
-        printf("Área\n");
-        break;
-    case 3:
-        printf("PIB\n");
-        break;
-    case 4:
-        printf("Número de pontos turisticos\n");
-        break;
-    case 5:
-        printf("Densidade Populacional\n");
-        break;
-    }
-
-    switch (atributo1)
-    {
-    case 1:
-        printf("População: %d X %d", populacao1, populacao2);
-        break;
-    case 2:
-        printf("Área: %.2f X %.2f", area1, area2);
-        break;
-    case 3:
-        printf("PIB: %.2f X %.2f", pib1, pib2);
-        break;
-    case 4:
-        printf("Pontos Turisticos: %d X %d", numero_de_pontos_turisticos1, numero_de_pontos_turisticos2);
-        break;
-    case 5:
-        printf("Densidade: %.2f X %.2f", densidade1, densidade2);
-        break;
-    default:
-        break;
-    }
-
-    switch (atributo2)
-    {
-    case 1:
-        printf("\nPopulação: %d X %d", populacao1, populacao2);
-        break;
-    case 2:
-        printf("\nÁrea: %.2f X %.2f", area1, area2);
-        break;
-    case 3:
-        printf("\nPIB: %.2f X %.2f", pib1, pib2);
-        break;
-    case 4:
-        printf("\nPontos Turisticos: %d X %d", numero_de_pontos_turisticos1, numero_de_pontos_turisticos2);
-        break;
-    case 5:
-        printf("\nDensidade: %.2f X %.2f", densidade1, densidade2);
-        break;
-    }
-
-    if (atributo1 == 1 || atributo2 == 1){
-        if (populacao1 > populacao2){
-            soma1++;
-        }else if (populacao1 < populacao2){
-            soma2++;
-        }
-    } 
-    if (atributo1 == 2 || atributo2 == 2){
-        if (area1 > area2){
-            soma1++;
-        }else if (area1 < area2){
-            soma2++;
-        }
-    } 
-    if (atributo1 == 3 || atributo2 == 3){
-        if (pib1 > pib2){
-            soma1++;
-        }else if (pib1 < pib2){
-            soma2++;
-        }
-    } 
-    if (atributo1 == 4 || atributo2 == 4){
-        if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2){
-            soma1++;
-        }else if(numero_de_pontos_turisticos1 < numero_de_pontos_turisticos2){
-            soma2++;
-        }
-    } 
-    if (atributo1 == 5 || atributo2 == 5){
-        if (densidade1 < densidade2){
-            soma1++;
-        }else if (densidade1 > densidade2){
-            soma2++;
-        }
-    }
-
-    printf("\nSoma carta 1: %d", soma1);
-    printf("\nSoma carta 2: %d", soma2);
-
-    if (soma1 > soma2)
-    {
-        printf("\nA carta 1 venceu!");
-        switch (escolha)
+        printf("\nAtributos escolhidos:\n");
+        switch (atributo1)
         {
         case 1:
-            printf("\nParabéns era sua carta e você GANHOU!!");
+            printf("População e ");
             break;
-        default:
-            printf("\nInfelizmente não era sua carta e você PERDEU!!");
+        case 2:
+            printf("Área e ");
+            break;
+        case 3:
+            printf("PIB e ");
+            break;
+        case 4:
+            printf("Número de pontos turisticos e ");
+            break;
+        case 5:
+            printf("Densidade Populacional e ");
             break;
         }
-    }
-    else if (soma1 < soma2)
-    {
-        printf("\nA carta 2 venceu!");
-        
-        switch (escolha)
+        switch (atributo2)
         {
         case 1:
-            printf("\nInfelizmente não era sua carta e você PERDEU!!");
+            printf("População\n");
             break;
-        default:
-            printf("\nParabéns era sua carta e você GANHOU!!");
+        case 2:
+            printf("Área\n");
+            break;
+        case 3:
+            printf("PIB\n");
+            break;
+        case 4:
+            printf("Número de pontos turisticos\n");
+            break;
+        case 5:
+            printf("Densidade Populacional\n");
             break;
         }
-    }
-    else
-    {
-        printf("\nEmpate!");
-    }
 
+        switch (atributo1)
+        {
+        case 1:
+            printf("População: %d X %d", populacao1, populacao2);
+            break;
+        case 2:
+            printf("Área: %.2f X %.2f", area1, area2);
+            break;
+        case 3:
+            printf("PIB: %.2f X %.2f", pib1, pib2);
+            break;
+        case 4:
+            printf("Pontos Turisticos: %d X %d", numero_de_pontos_turisticos1, numero_de_pontos_turisticos2);
+            break;
+        case 5:
+            printf("Densidade: %.2f X %.2f", densidade1, densidade2);
+            break;
+        default:
+            break;
+        }
+
+        switch (atributo2)
+        {
+        case 1:
+            printf("\nPopulação: %d X %d", populacao1, populacao2);
+            break;
+        case 2:
+            printf("\nÁrea: %.2f X %.2f", area1, area2);
+            break;
+        case 3:
+            printf("\nPIB: %.2f X %.2f", pib1, pib2);
+            break;
+        case 4:
+            printf("\nPontos Turisticos: %d X %d", numero_de_pontos_turisticos1, numero_de_pontos_turisticos2);
+            break;
+        case 5:
+            printf("\nDensidade: %.2f X %.2f", densidade1, densidade2);
+            break;
+        }
+
+        if (atributo1 == 1 || atributo2 == 1)
+        {
+            if (populacao1 > populacao2)
+            {
+                soma1++;
+            }
+            else if (populacao1 < populacao2)
+            {
+                soma2++;
+            }
+        }
+        if (atributo1 == 2 || atributo2 == 2)
+        {
+            if (area1 > area2)
+            {
+                soma1++;
+            }
+            else if (area1 < area2)
+            {
+                soma2++;
+            }
+        }
+        if (atributo1 == 3 || atributo2 == 3)
+        {
+            if (pib1 > pib2)
+            {
+                soma1++;
+            }
+            else if (pib1 < pib2)
+            {
+                soma2++;
+            }
+        }
+        if (atributo1 == 4 || atributo2 == 4)
+        {
+            if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2)
+            {
+                soma1++;
+            }
+            else if (numero_de_pontos_turisticos1 < numero_de_pontos_turisticos2)
+            {
+                soma2++;
+            }
+        }
+        if (atributo1 == 5 || atributo2 == 5)
+        {
+            if (densidade1 < densidade2)
+            {
+                soma1++;
+            }
+            else if (densidade1 > densidade2)
+            {
+                soma2++;
+            }
+        }
+
+        printf("\nSoma carta 1: %d", soma1);
+        printf("\nSoma carta 2: %d", soma2);
+
+        if (soma1 > soma2)
+        {
+            printf("\nA carta 1 venceu!");
+            switch (escolha)
+            {
+            case 1:
+                printf("\nParabéns era sua carta e você GANHOU!!");
+                break;
+            default:
+                printf("\nInfelizmente não era sua carta e você PERDEU!!");
+                break;
+            }
+        }
+        else if (soma1 < soma2)
+        {
+            printf("\nA carta 2 venceu!");
+
+            switch (escolha)
+            {
+            case 1:
+                printf("\nInfelizmente não era sua carta e você PERDEU!!");
+                break;
+            default:
+                printf("\nParabéns era sua carta e você GANHOU!!");
+                break;
+            }
+        }
+        else
+        {
+            printf("\nEmpate!");
+        }
+    }
+    else{
+        printf("\nErro, não é possível repitir o atributo!");
+    }
     return 0;
 }
